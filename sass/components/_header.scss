@@ -87,13 +87,19 @@
     fill: $main-content-text-color;
 }
 
+.menu-button__icon:hover,
+.menu-button__icon:focus {
+    fill: $accent-color;
+}
+
 .menu-button__icon-close {
     display: none;
 }
 
 .menu-button.is-open .menu-button__icon-close {
-    display: block; 
+    display: block;
 }
+
 
 .menu-button.is-open .menu-button__icon-open {
     display: none;

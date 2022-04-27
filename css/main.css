@@ -264,6 +264,11 @@ img {
   fill: #212121;
 }
 
+.menu-button__icon:hover,
+.menu-button__icon:focus {
+  fill: #2196f3;
+}
+
 .menu-button__icon-close {
   display: none;
 }
