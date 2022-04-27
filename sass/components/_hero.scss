@@ -9,7 +9,7 @@
 
     // Mobile background image
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../images/hero/hero_background_mobile.jpg);
+        url(../images/hero/hero_background_mobile.jpg);
     
 
     @media (min-device-pixel-ratio: 2),
@@ -18,7 +18,7 @@
     (min-resolution: 2dppx) {
         & {
             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
-            url(../../images/hero/hero_background_mobile@2x.jpg);
+            url(../images/hero/hero_background_mobile@2x.jpg);
         }
     }
 
@@ -27,7 +27,7 @@
     @media screen and (min-width: $tablet) {
         max-width: $tablet;
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../images/hero/hero_background_tablet.jpg);
+        url(../images/hero/hero_background_tablet.jpg);
 
         @media (min-device-pixel-ratio: 2),
         (-webkit-min-device-pixel-ratio: 2),
@@ -35,7 +35,7 @@
         (min-resolution: 2dppx) {
             & {
                 background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                    url(../../images/hero/hero_background_tablet@2x.jpg);
+                    url(../images/hero/hero_background_tablet@2x.jpg);
             }
         }        
     }
@@ -47,7 +47,7 @@
         padding: 200px 0;
         
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../../images/hero/hero_background_desktop.jpg);
+            url(../images/hero/hero_background_desktop.jpg);
     
         @media (min-device-pixel-ratio: 2),
         (-webkit-min-device-pixel-ratio: 2),
@@ -55,7 +55,7 @@
         (min-resolution: 2dppx) {
             & {
                 background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                    url(../../images/hero/hero_background_desktop@2x.jpg);
+                    url(../images/hero/hero_background_desktop@2x.jpg);
             }
         }
     }
