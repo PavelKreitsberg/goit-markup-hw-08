@@ -21,35 +21,48 @@
     <!-- Header-->
 
     <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a class="logo" href="./index.html">Web<span class="logo--color">Studio</span></a>
+        <div class="container header-container">
+            <a class="logo" href="./index.html">Web<span class="logo--color">Studio</span></a>
+            <button type="button" class="menu-button" data-menu-button>
+                <svg width="40" height="40" class="menu-button__icon" aria-label="Переключатель мобильного меню">
+                    <use class="menu-button__icon-open" href="./images/icons.svg#icon-menu"></use>
+                    <use class="menu-button__icon-close" href="./images/icons.svg#icon-close-menu"></use>
+                </svg>
+            </button>
+            <nav class="nav" data-menu>
                 <ul class="site-nav">
-                    <li class="site-nav__item"><a href="./index.html"
-                            class="site-nav__link">Студия</a></li>
-                    <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link site-nav__link--active">Портфолио</a></li>
+                    <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студия</a></li>
+                    <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link  site-nav__link--active">Портфолио</a></li>
                     <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
                 </ul>
+                <div class="contact-wrapper">
+                    <ul class="contacts">
+                        <li class="contacts__item">
+                            <a href="mailto:info@devstudio.com" class="contacts__link">
+                                <svg class="contacts__icon" width="16" height="12">
+                                    <use href="./images/icons.svg#icon-mail">
+                                    </use>
+                                </svg>
+                                info@devstudio.com</a>
+                        </li>
+                        <li class="contacts__item">
+                            <a href="tel:+380961111111" class="contacts__link">
+                                <svg class="contacts__icon" width="10" height="16">
+                                    <use href="./images/icons.svg#icon-smartphone">
+                                    </use>
+                                </svg>
+                                +38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                    <ul class="menu-social">
+                        <li class="menu-social__item"><a href="#">Instagram</a></li>
+                        <li class="menu-social__item"><a href="#">Twitter</a></li>
+                        <li class="menu-social__item"><a href="#">Facebook</a></li>
+                        <li class="menu-social__item"><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
             </nav>
-            <ul class="contacts">
-                <li class="contacts__item">
-                    <a href="mailto:info@devstudio.com" class="contacts__link">
-                        <svg class="contacts__icon" width="16" height="12">
-                            <use href="./images/icons.svg#icon-mail">
-                            </use>
-                        </svg>
-                        info@devstudio.com</a>
-                </li>
-                <li class="contacts__item">
-                    <a href="tel:+380961111111" class="contacts__link">
-                        <svg class="contacts__icon" width="10" height="16">
-                            <use href="./images/icons.svg#icon-smartphone">
-                            </use>
-                        </svg>
-                        +38 096 111 11 11</a>
-                </li>
     
-            </ul>
         </div>
     </header>
 
@@ -77,7 +90,16 @@
                     <li class="project">
                         <a href="#" class="project__link">
                             <div class="project__cover">
-                                <img class="project__photo" src="./images/our-portfolio-images/img1.jpg" width="370" alt="Фото проекта 1">
+                                <img class="project__photo" src="./images/our-portfolio-images/img1_mobile-450.jpg"
+                                    srcset="
+                                        ./images/our-portfolio-images/img1_mobile-450.jpg, 
+                                        ./images/our-portfolio-images/img1_mobile-900.jpg,
+                                        ./images/our-portfolio-images/img1_tablet-354.jpg,
+                                        ./images/our-portfolio-images/img1_tablet-708.jpg,
+                                        ./images/our-portfolio-images/img1_desktop-370.jpg,
+                                        ./images/our-portfolio-images/img1_desktop-740.jpg"
+                                    sizes="(min-width: 768px) and (max-width: 1199px) 354px, (min-width: 1200px) 370px, 450px" 
+                                    alt="Фото проекта 1">
                                 <p class="project__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. 
                                     Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -92,7 +114,16 @@
                     <li class="project">
                         <a href="" class="project__link">
                             <div class="project__cover">
-                                <img class="project__photo" src="./images/our-portfolio-images/img2.jpg" width="370" alt="Фото проекта 2">
+                                <img class="project__photo" src="./images/our-portfolio-images/img2_mobile-450.jpg"
+                                    srcset="
+                                        ./images/our-portfolio-images/img2_mobile-450.jpg, 
+                                        ./images/our-portfolio-images/img2_mobile-900.jpg,
+                                        ./images/our-portfolio-images/img2_tablet-354.jpg,
+                                        ./images/our-portfolio-images/img2_tablet-708.jpg,
+                                        ./images/our-portfolio-images/img2_desktop-370.jpg,
+                                        ./images/our-portfolio-images/img2_desktop-740.jpg"
+                                    sizes="(min-width: 768px) and (max-width: 1199px) 354px, (min-width: 1200px) 370px, 450px" 
+                                    alt="Фото проекта 2">
                                 <p class="project__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -107,7 +138,16 @@
                     <li class="project">
                         <a href="" class="project__link">
                             <div class="project__cover">
-                                <img class="project__photo" src="./images/our-portfolio-images/img3.jpg" width="370" alt="Фото проекта 3">
+                                <img class="project__photo" src="./images/our-portfolio-images/img3_mobile-450.jpg"
+                                    srcset="
+                                        ./images/our-portfolio-images/img3_mobile-450.jpg, 
+                                        ./images/our-portfolio-images/img3_mobile-900.jpg,
+                                        ./images/our-portfolio-images/img3_tablet-354.jpg,
+                                        ./images/our-portfolio-images/img3_tablet-708.jpg,
+                                        ./images/our-portfolio-images/img3_desktop-370.jpg,
+                                        ./images/our-portfolio-images/img3_desktop-740.jpg"
+                                    sizes="(min-width: 768px) and (max-width: 1199px) 354px, (min-width: 1200px) 370px, 450px" 
+                                    alt="Фото проекта 3">
                                 <p class="project__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -122,7 +162,16 @@
                     <li class="project">
                         <a href="" class="project__link">
                             <div class="project__cover">
-                                <img class="project__photo" src="./images/our-portfolio-images/img4.jpg" width="370" alt="Фото проекта 4">
+                                <img class="project__photo" src="./images/our-portfolio-images/img4_mobile-450.jpg"
+                                    srcset="
+                                        ./images/our-portfolio-images/img4_mobile-450.jpg, 
+                                        ./images/our-portfolio-images/img4_mobile-900.jpg,
+                                        ./images/our-portfolio-images/img4_tablet-354.jpg,
+                                        ./images/our-portfolio-images/img4_tablet-708.jpg,
+                                        ./images/our-portfolio-images/img4_desktop-370.jpg,
+                                        ./images/our-portfolio-images/img4_desktop-740.jpg"
+                                    sizes="(min-width: 768px) and (max-width: 1199px) 354px, (min-width: 1200px) 370px, 450px" 
+                                    alt="Фото проекта 4">
                                 <p class="project__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -137,7 +186,16 @@
                     <li class="project">
                         <a href="" class="project__link">
                             <div class="project__cover">
-                                <img class="project__photo" src="./images/our-portfolio-images/img5.jpg" width="370" alt="Фото проекта 5">
+                                <img class="project__photo" src="./images/our-portfolio-images/img5_mobile-450.jpg"
+                                    srcset="
+                                        ./images/our-portfolio-images/img5_mobile-450.jpg, 
+                                        ./images/our-portfolio-images/img5_mobile-900.jpg,
+                                        ./images/our-portfolio-images/img5_tablet-354.jpg,
+                                        ./images/our-portfolio-images/img5_tablet-708.jpg,
+                                        ./images/our-portfolio-images/img5_desktop-370.jpg,
+                                        ./images/our-portfolio-images/img5_desktop-740.jpg"
+                                    sizes="(min-width: 768px) and (max-width: 1199px) 354px, (min-width: 1200px) 370px, 450px" 
+                                    alt="Фото проекта 5">
                                 <p class="project__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -152,7 +210,16 @@
                     <li class="project">
                         <a href="" class="project__link">
                             <div class="project__cover">
-                                <img class="project__photo" src="./images/our-portfolio-images/img6.jpg" width="370" alt="Фото проекта 6">
+                                <img class="project__photo" src="./images/our-portfolio-images/img6_mobile-450.jpg"
+                                    srcset="
+                                        ./images/our-portfolio-images/img6_mobile-450.jpg, 
+                                        ./images/our-portfolio-images/img6_mobile-900.jpg,
+                                        ./images/our-portfolio-images/img6_tablet-354.jpg,
+                                        ./images/our-portfolio-images/img6_tablet-708.jpg,
+                                        ./images/our-portfolio-images/img6_desktop-370.jpg,
+                                        ./images/our-portfolio-images/img6_desktop-740.jpg"
+                                    sizes="(min-width: 768px) and (max-width: 1199px) 354px, (min-width: 1200px) 370px, 450px" 
+                                    alt="Фото проекта 6">
                                 <p class="project__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -167,7 +234,16 @@
                     <li class="project">
                         <a href="" class="project__link">
                             <div class="project__cover">
-                                <img class="project__photo" src="./images/our-portfolio-images/img7.jpg" width="370" alt="Фото проекта 7">
+                                <img class="project__photo" src="./images/our-portfolio-images/img7_mobile-450.jpg"
+                                    srcset="
+                                        ./images/our-portfolio-images/img7_mobile-450.jpg, 
+                                        ./images/our-portfolio-images/img7_mobile-900.jpg,
+                                        ./images/our-portfolio-images/img7_tablet-354.jpg,
+                                        ./images/our-portfolio-images/img7_tablet-708.jpg,
+                                        ./images/our-portfolio-images/img7_desktop-370.jpg,
+                                        ./images/our-portfolio-images/img7_desktop-740.jpg"
+                                    sizes="(min-width: 768px) and (max-width: 1199px) 354px, (min-width: 1200px) 370px, 450px" 
+                                    alt="Фото проекта 7">
                                 <p class="project__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -182,7 +258,16 @@
                     <li class="project">
                         <a href="" class="project__link">
                             <div class="project__cover">
-                                <img class="project__photo" src="./images/our-portfolio-images/img8.jpg" width="370" alt="Фото проекта 8">
+                                <img class="project__photo" src="./images/our-portfolio-images/img8_mobile-450.jpg"
+                                    srcset="
+                                        ./images/our-portfolio-images/img8_mobile-450.jpg, 
+                                        ./images/our-portfolio-images/img8_mobile-900.jpg,
+                                        ./images/our-portfolio-images/img8_tablet-354.jpg,
+                                        ./images/our-portfolio-images/img8_tablet-708.jpg,
+                                        ./images/our-portfolio-images/img8_desktop-370.jpg,
+                                        ./images/our-portfolio-images/img8_desktop-740.jpg"
+                                    sizes="(min-width: 768px) and (max-width: 1199px) 354px, (min-width: 1200px) 370px, 450px" 
+                                    alt="Фото проекта 8">
                                 <p class="project__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -197,7 +282,16 @@
                     <li class="project">
                         <a href="" class="project__link">
                             <div class="project__cover">
-                                <img class="project__photo" src="./images/our-portfolio-images/img9.jpg" width="370" alt="Фото проекта 9">
+                                <img class="project__photo" src="./images/our-portfolio-images/img9_mobile-450.jpg"
+                                    srcset="
+                                        ./images/our-portfolio-images/img9_mobile-450.jpg, 
+                                        ./images/our-portfolio-images/img9_mobile-900.jpg,
+                                        ./images/our-portfolio-images/img9_tablet-354.jpg,
+                                        ./images/our-portfolio-images/img9_tablet-708.jpg,
+                                        ./images/our-portfolio-images/img9_desktop-370.jpg,
+                                        ./images/our-portfolio-images/img9_desktop-740.jpg"
+                                    sizes="(min-width: 768px) and (max-width: 1199px) 354px, (min-width: 1200px) 370px, 450px" 
+                                    alt="Фото проекта 9">
                                 <p class="project__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -219,80 +313,83 @@
 
     <!-- Footer  -->
 
-    <footer class="footer">
-        <div class="container container-footer">
-            <div class="footer__address">
-                <h3 class="footer__subtitle visually-hidden">Контакты</h3>
-                <a class=" logo bottom-logo" href="./index.html">Web<span class="bottom-logo--color">Studio</span></a>
-                <address>
-                    <ul class="address">
-                        <li class="address__item">
-                            <a href="https://goo.gl/maps/eCUYpjaDpkrnBJZcA" target="_blank" rel="noopener noreferrer"
-                                class="adress__link">
-                                г. Киев, пр-т Леси Украинки, 26
-                            </a>
-                        </li>
-                        <li class="address__item">
-                            <a href="mailto:info@example.com" class="adress__link adress__link--grey">
-                                info@example.com
-                            </a>
-                        </li>
-                        <li class="address__item">
-                            <a href="tel:+380991111111" class="adress__link adress__link--grey">
-                                +38 099 111 11 11
-                            </a>
-                        </li>
-                    </ul>
-                </address>
-            </div>
-            <div class="footer__social-media">
-                <h3 class="footer__subtitle">Присоединяйтесь</h3>
-                <ul class="social-media">
-                    <li class="social-media__item social-media__item--dark">
-                        <a href="">
-                            <svg class="social-media__icon social-media__icon--light" width="20" height="20">
-                                <use href="./images/icons.svg#icon-instagram"></use>
+        <footer class="footer">
+            <div class="container container-footer">
+                <div class="footer__information-wrapper">
+                    <div class="footer__address">
+                        <a class=" logo bottom-logo" href="./index.html">Web<span class="bottom-logo--color">Studio</span></a>
+                        <h3 class="footer__subtitle visually-hidden">Контакты</h3>
+                        <address>
+                            <ul class="address">
+                                <li class="address__item">
+                                    <a href="https://goo.gl/maps/eCUYpjaDpkrnBJZcA" target="_blank" rel="noopener noreferrer"
+                                        class="adress__link">
+                                        г. Киев, пр-т Леси Украинки, 26
+                                    </a>
+                                </li>
+                                <li class="address__item">
+                                    <a href="mailto:info@example.com" class="adress__link adress__link--grey">
+                                        info@example.com
+                                    </a>
+                                </li>
+                                <li class="address__item">
+                                    <a href="tel:+380991111111" class="adress__link adress__link--grey">
+                                        +38 099 111 11 11
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="footer__social-media">
+                        <h3 class="footer__subtitle">Присоединяйтесь</h3>
+                        <ul class="social-media">
+                            <li class="social-media__item social-media__item--dark">
+                                <a href="">
+                                    <svg class="social-media__icon social-media__icon--light" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-media__item social-media__item--dark">
+                                <a href="">
+                                    <svg class="social-media__icon social-media__icon--light" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-media__item social-media__item--dark">
+                                <a href="">
+                                    <svg class="social-media__icon social-media__icon--light" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-media__item social-media__item--dark">
+                                <a href="">
+                                    <svg class="social-media__icon social-media__icon--light" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__subscription">
+                    <h3 class="footer__subtitle">Подпишитесь на рассылку</h3>
+                    <div class="subscription">
+                        <label for="mailing-section"></label>
+                        <input type="email" name="email" placeholder="E-mail" id="mailing-section" class="subscription__input">
+                        <button type="submit" class="button">Подписаться
+                            <svg class="button__icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-icon-send">
+                                </use>
                             </svg>
-                        </a>
-                    </li>
-                    <li class="social-media__item social-media__item--dark">
-                        <a href="">
-                            <svg class="social-media__icon social-media__icon--light" width="20" height="20">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-media__item social-media__item--dark">
-                        <a href="">
-                            <svg class="social-media__icon social-media__icon--light" width="20" height="20">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-media__item social-media__item--dark">
-                        <a href="">
-                            <svg class="social-media__icon social-media__icon--light" width="20" height="20">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__subscription">
-                <h3 class="footer__subtitle">Подпишитесь на рассылку</h3>
-                <div class="subscription">
-                    <label for="subscription__label"></label>
-                    <input type="email" name="email" placeholder="E-mail" id="mailing-section" class="subscription__input">
-                    <button type="submit" class="button">Подписаться
-                        <svg class="button__icon" width="24" height="24">
-                            <use href="./images/icons.svg#icon-icon-send">
-                            </use>
-                        </svg>
-                    </button>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

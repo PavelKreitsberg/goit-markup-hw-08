@@ -1,5 +1,11 @@
 .works-section {
     padding-top: 0;
+
+    @media screen and (max-width: $desktop) {
+        & {
+            display: none;
+        }        
+    }
 }
 
 .works {

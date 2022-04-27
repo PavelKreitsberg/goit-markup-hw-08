@@ -4,13 +4,17 @@
 
 .team {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    margin: -15px;
 }
+
 
 .team-member {
     background-color: $main-background-color;
     border-radius: 4px;
+
+    margin: 15px;
 }
 
 .team-member__info {
@@ -37,7 +41,7 @@
 
 .social-media {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .social-media__item {
@@ -53,6 +57,9 @@
         background-color: $accent-color;
         cursor: pointer;
     }
+}
+.social-media__item:not(:last-child) {
+    margin-right: 10px;
 }
 
 .social-media__icon {

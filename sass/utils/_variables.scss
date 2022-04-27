@@ -8,6 +8,10 @@ $card-border-color: #eeeeee;
 $passive-icon-color: #afb1b8;
 $animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px; 
+
 
 
 // Global
@@ -46,7 +50,19 @@ img {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
-    width: 1200px;
+    max-width: 480px;
+
+    @media screen and (min-width: $tablet) {
+        & {
+            max-width: 768px;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        & {
+            max-width: 1200px;
+        }
+    }
 }
 
 .section {
@@ -56,8 +72,8 @@ img {
 
 .section__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 50px;
@@ -85,4 +101,3 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
